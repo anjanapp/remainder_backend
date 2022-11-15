@@ -25,8 +25,8 @@ const register = (username, acno, password) => {
                 acno,
                 username,
                 password,
-                balance: 0,
-                transaction: []    //objects defined
+                
+                event: []    //objects defined
 
 
             })
@@ -89,9 +89,6 @@ const addEvent = (req,date,ed)=>{
       acno:currentAcno
     }).then(user=>{
       if(user){
-        
-          
-        
         user.event.push({
           date:date,
           ed:ed

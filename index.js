@@ -21,12 +21,7 @@ app.use(cors({
 //parse JSON data
 app.use(express.json())
 
-const appMiddleware = (req, res, next) => {
-    console.log("appication specific middleware");
-    next()
-}
-//use middleware
-app.use(appMiddleware)
+
 
 //bank server
 
@@ -83,6 +78,8 @@ app.post('/getEvent',jwtMiddleware,(req,res)=>{
         res.status(result.statusCode).json(result)
 })
 })
+
+
 
 
 
